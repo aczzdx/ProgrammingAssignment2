@@ -4,11 +4,11 @@
 ##  makeCacheMatrix: a function that return a object which can cache the inverse of a matrix
 
 makeCacheMatrix <- function(x = matrix()) {
-	fun_inv <- NULL
+	my_inv <- NULL
 	
 	set <- function(y){
 		x <<- y
-		fun_inv <- NULL
+		my_inv <- NULL
 	}
 	
 	get <- function() {
@@ -16,11 +16,11 @@ makeCacheMatrix <- function(x = matrix()) {
 	}
 	
 	setinv <- function(inv) {
-		fun_inv <<- inv
+		my_inv <<- inv
 	}
 	
 	getinv <- function() {
-		fun_inv
+		my_inv
 	}
 	
 	list(set = set, get = get,
